@@ -1,0 +1,5 @@
+E:\Projects\Private\SoftUniContests\SoftUniContests.BusinessObjects\bin\Debug\SoftUniContests.BusinessObjects.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.BusinessObjects\bin\Debug\SoftUniContests.BusinessObjects.pdb
+E:\Projects\Private\SoftUniContests\SoftUniContests.BusinessObjects\obj\Debug\SoftUniContests.BusinessObjects.csprojResolveAssemblyReference.cache
+E:\Projects\Private\SoftUniContests\SoftUniContests.BusinessObjects\obj\Debug\SoftUniContests.BusinessObjects.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.BusinessObjects\obj\Debug\SoftUniContests.BusinessObjects.pdb

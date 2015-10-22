@@ -1,0 +1,14 @@
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\SoftUniContests.DAL.dll.config
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\SoftUniContests.DAL.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\SoftUniContests.DAL.pdb
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\EntityFramework.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\SoftUniContests.BusinessObjects.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\SoftUniContests.BusinessObjects.pdb
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\EntityFramework.xml
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\obj\Debug\SoftUniContests.DAL.csprojResolveAssemblyReference.cache
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\obj\Debug\SoftUniContests.DAL.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\obj\Debug\SoftUniContests.DAL.pdb
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\AutoMapper.dll
+E:\Projects\Private\SoftUniContests\SoftUniContests.DAL\bin\Debug\AutoMapper.xml
