@@ -61,6 +61,8 @@
     <Property Name="ParticipationStrategy" Type="SoftuniContestsModel.ParticipationStrategy" Nullable="false" />
     <Property Name="DeadlineStrategy" Type="SoftuniContestsModel.DeadlineStrategy" Nullable="false" />
     <NavigationProperty Name="Pictures" Relationship="Self.FK_Pictures_Contests" FromRole="Contests" ToRole="Pictures" />
+    <Property Name="DeadlineDate" Type="DateTime" Precision="3" />
+    <Property Name="DeadlineParticipants" Type="Int32" />
   </EntityType>
   <EntityType Name="Picture">
     <Key>

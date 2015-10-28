@@ -1,0 +1,16 @@
+﻿@model Enum
+@{
+    Layout = null;
+    Dictionary<int, string> values = new Dictionary<int, string>();
+    foreach (var item in Enum.GetValues(Model.GetType()))
+	{
+        values.Add((int)item, item.ToString());
+	}  
+}
+
+<select class="form-control" name="@ViewData["property"]" id="@ViewData["property"]">
+    @foreach (var item in values)
+    {
+        <option value="@item.Key">@item.Value</option>
+    }
+</select>

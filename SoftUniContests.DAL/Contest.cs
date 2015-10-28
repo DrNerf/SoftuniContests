@@ -27,6 +27,8 @@ namespace SoftUniContests.DAL
         public SoftUniContests.BusinessObjects.Enums.VotingStrategy VoteStrategy { get; set; }
         public SoftUniContests.BusinessObjects.Enums.ParticipationStrategy ParticipationStrategy { get; set; }
         public SoftUniContests.BusinessObjects.Enums.DeadlineStrategy DeadlineStrategy { get; set; }
+        public Nullable<System.DateTime> DeadlineDate { get; set; }
+        public Nullable<int> DeadlineParticipants { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Picture> Pictures { get; set; }

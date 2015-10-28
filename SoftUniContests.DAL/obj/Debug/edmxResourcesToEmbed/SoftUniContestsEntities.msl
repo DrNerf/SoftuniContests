@@ -49,6 +49,8 @@
     <EntitySetMapping Name="Contests">
       <EntityTypeMapping TypeName="SoftuniContestsModel.Contest">
         <MappingFragment StoreEntitySet="Contests">
+          <ScalarProperty Name="DeadlineParticipants" ColumnName="DeadlineParticipants" />
+          <ScalarProperty Name="DeadlineDate" ColumnName="DeadlineDate" />
           <ScalarProperty Name="ContestID" ColumnName="ContestID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />

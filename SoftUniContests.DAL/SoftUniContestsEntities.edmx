@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SoftuniContestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SoftuniContestsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AspNetRoles">
           <Key>
             <PropertyRef Name="Id" />
@@ -67,6 +67,8 @@
           <Property Name="VoteStrategy" Type="int" Nullable="false" />
           <Property Name="ParticipationStrategy" Type="int" Nullable="false" />
           <Property Name="DeadlineStrategy" Type="int" Nullable="false" />
+          <Property Name="DeadlineDate" Type="datetime" />
+          <Property Name="DeadlineParticipants" Type="int" />
         </EntityType>
         <EntityType Name="Pictures">
           <Key>
@@ -175,8 +177,7 @@
             <End Role="Pictures" EntitySet="Pictures" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SoftuniContestsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -241,6 +242,8 @@
           <Property Name="ParticipationStrategy" Type="SoftuniContestsModel.ParticipationStrategy" Nullable="false" />
           <Property Name="DeadlineStrategy" Type="SoftuniContestsModel.DeadlineStrategy" Nullable="false" />
           <NavigationProperty Name="Pictures" Relationship="Self.FK_Pictures_Contests" FromRole="Contests" ToRole="Pictures" />
+          <Property Name="DeadlineDate" Type="DateTime" Precision="3" />
+          <Property Name="DeadlineParticipants" Type="Int32" />
         </EntityType>
         <EntityType Name="Picture">
           <Key>
@@ -379,6 +382,8 @@
           <EntitySetMapping Name="Contests">
             <EntityTypeMapping TypeName="SoftuniContestsModel.Contest">
               <MappingFragment StoreEntitySet="Contests">
+                <ScalarProperty Name="DeadlineParticipants" ColumnName="DeadlineParticipants" />
+                <ScalarProperty Name="DeadlineDate" ColumnName="DeadlineDate" />
                 <ScalarProperty Name="ContestID" ColumnName="ContestID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Description" ColumnName="Description" />

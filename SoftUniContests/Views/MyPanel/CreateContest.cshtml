@@ -1,0 +1,112 @@
+﻿@model SoftUniContests.BusinessObjects.Models.ContestModel
+
+@{
+    ViewBag.Title = "Create Contest";
+}
+
+<h2>Create Contest</h2>
+
+@using (Html.BeginForm("CreateContest", "MyPanel")) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeadlineStrategy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.DeadlineStrategy, "EnumTemplate", new { property = "DeadlineStrategy" })
+                @Html.ValidationMessageFor(model => model.DeadlineStrategy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ParticipationStrategy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.ParticipationStrategy, "EnumTemplate", new { property = "ParticipationStrategy" })
+                @Html.ValidationMessageFor(model => model.ParticipationStrategy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RewardStrategy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.RewardStrategy, "EnumTemplate", new { property = "RewardStrategy" })
+                @Html.ValidationMessageFor(model => model.RewardStrategy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VoteStrategy, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.VoteStrategy, "EnumTemplate", new { property = "VoteStrategy" })
+                @Html.ValidationMessageFor(model => model.VoteStrategy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="display:none;">
+            @Html.LabelFor(model => model.DeadlineDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeadlineDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeadlineDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="display:none;">
+            @Html.LabelFor(model => model.DeadlineParticipants, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeadlineParticipants, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeadlineParticipants, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#DeadlineStrategy").change(function () {
+                if ($(this).val() == 1) {
+                    $("#DeadlineParticipants").parent().parent().slideUp();
+                    $("#DeadlineDate").parent().parent().slideDown();
+                }
+                else if ($(this).val() == 2) {
+                    $("#DeadlineDate").parent().parent().slideUp();
+                    $("#DeadlineParticipants").parent().parent().slideDown();
+                }
+                else {
+                    $("#DeadlineDate").parent().parent().slideUp();
+                    $("#DeadlineParticipants").parent().parent().slideUp();
+                }
+            });
+        });
+    </script>
+}
